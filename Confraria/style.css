@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+   --preto-primario: #202020;
+   --branco-primario: #fffffffb;
+   --vermelho-primario: #980508;
+   --amarelo-primario: #FFD300;
+}
+
+
+body {
+   background-color: var(--preto-primario);
+   color: var(--branco-primario);
+   font-family: 'Lato';
+}
+
+.container__pedido-wpp {
+   display: inline;
+   position: fixed;
+   left: 2em;
+   top:90%;
+   z-index: 1;
+}
+
+.texto__pedido-wpp {
+   text-align: center;
+   font-weight: 600;
+}
+
+.pedido-wpp {
+   margin-top: 1em;
+   width: 150px;
+   height: 50px;
+   background-color: var(--branco-primario);
+   border-radius: 20px;
+   border: none;
+}
+
+.logo_wpp {
+   width: 100px;
+}
+
+.cabecalho {
+   width: 100%;
+   background-color: var(--vermelho-primario);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.container__cabecalho {
+   width: 80%;
+   display:flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.cabecalho__logo {
+   width: 50%;
+}
+
+.logo__cabecalho{
+   width: 200px;
+}
+
+.cabecalho__lista {
+   display: flex;
+   justify-content: space-around;
+   width: 30%;
+   font-size: 1.3em;
+}
+
+.cabecalho_itens {
+   color: var(--branco-primario);
+   transition: .5s;
+   text-decoration: none;
+}
+
+.cabecalho_itens:hover{
+   transition: .5s;
+   color: var(--amarelo-primario);
+   border-bottom: 1px solid var(--amarelo-primario);
+}
+
+.container__inicial {
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 50vh;
+   background-image: url('./img/background.png');
+}
+
+.texto__inicial {
+   line-height: 1.5em;
+   text-align: center;
+}
+
+.principal {
+   font-size: 6em;
+}
+
+.secundario {
+   font-size: 3em;
+}
+
+.container__pizza-texto {
+   margin: 1em 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-flow: column;
+   line-height: 2em;
+   font-size: 1.1em;
+   text-align: center;
+}
+
+.texto__pizza {
+   margin: 1em 0;
+   font-size: 1.5em;
+   text-transform: uppercase;
+}
+
+.container__pizza-opcoes {
+   margin: 3em 0em;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   transition: .5s;
+}
+
+.container__pizza-itens {
+   margin: 0 1em;
+   width: 30%;
+   height: 200px;
+   display: flex;
+   position: relative;
+   align-items: center;
+   background-color: var(--branco-primario);
+   text-decoration: none;
+}
+
+.container__pizza-itens:hover {
+   transition: .5s;
+   top: 1px;
+   background-color: var(--amarelo-primario);
+   opacity: .9;
+}
+
+.container__pizza-img {
+   width: 50%;
+   height: 200px;
+}
+
+.container__pizza-descricao {
+   margin-left: 1em;
+   font-size: 1.5em;
+   font-weight: bold;
+   text-transform: uppercase;
+   color: var(--preto-primario);
+}
+
+.container__localizacao {
+   margin: 5em 0;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   font-size: 2em;
+   font-weight: bold;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.container__localizacao-imagem {
+   margin: 2em 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+}
+
+.localizacao-imagem {
+   width: 30%;
+   height: 300px;
+}
+
+.localizacao-iframe {
+   margin: 1em 0 2em 0;
+   width: 100%;
+   height: 200px;
+}
+
+.container__rodape {
+   background-color: #980508;
+   width: 100%;
+   font-size: 1.3em;
+   font-weight: bold;
+   text-align: center;
+   line-height: 2em;
+}
+
+.rodape {
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.itens__rodape {
+   margin-top: 1em;
+   width: 30%;
+}
+
+.rodape__img {
+   margin: 1em 1em;
+   height: 50px;
+}
+
+.rodape__link-telefone {
+   padding-top: 2em;
+   color: var(--branco-primario);
+   text-decoration: none;
+}
+
+.rodape__link-telefone:hover {
+   transition: .5s;
+   color: var(--amarelo-primario);
+}
+
+@media screen and (max-width:700px){
+   .container__pedido-wpp {
+      display: none;
+   }
+
+   .principal {
+      font-size: 3em;
+   }
+
+   .secundario {
+      font-size: 1.5em;
+   }
+
+   .container__inicial {
+      width: auto;
+   }
+
+   .container__cabecalho, .cabecalho__lista, .container__pizza-itens, .localizacao-imagem, .localizacao-iframe, .itens__rodape{
+      width: 95%;
+      margin: 1em 0;
+   }
+
+   .container__cabecalho, .container__pizza-opcoes, .container__localizacao-imagem, .rodape {
+      flex-flow: column;
+   }
+
+   .rodape {
+      align-items: center;
+      justify-content: center;
+   }
+}
